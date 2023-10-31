@@ -1,0 +1,35 @@
+---
+title: "About"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+---
+
+
+This page provides a snapshot of my education and professional experience.
+
+# Education Background
+
+* M.A. in Biomedical Informatics | Columbia University  (August 2022 - May 2024)
+* M.S. in Biomedical Engineering | Duke University (August 2020 - May 2022)
+* B.S. in Biomedical Engineering | UC, Irvine (Septermber 2016 - June 2020)
+
+
+# Some Research Experiences
+
+* Implemented and evaluated transformer models on Narrative nursing notes de-identification
+
+* Developed phenotype-driven genomic test recommendation system
+
+* Conducted a systematic scoping review regarding wearable sensors based on multimodal physiological signals (ECG, ACM, EDA, etc.) in seizure monitoring under ambulatory settings. [Publication](https://iopscience.iop.org/article/10.1088/1361-6579/ac7a8d/pdf)
+
+* Experienced in Microscopy data analysis software Imaris, data management, visualization, analysis, segmentation and interpretation of 3D and 4D microscopy datasets (confocal and multiphoton images).  [Publication](https://www.pnas.org/doi/abs/10.1073/pnas.2006895117)
+
+
+
+
+
+
+
+
