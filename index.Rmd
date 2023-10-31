@@ -1,0 +1,12 @@
+---
+title: "Welcome to My Homepage"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+---
+
+# Intro
+
+Hello, welcome to my website and thrilled to have you here. This website entails a glance of my education background and research experiences.
+
