@@ -9,4 +9,3 @@ output:
 # Introduction of the Website
 
 Hello, welcome to my website and thrilled to have you here. This website entails a glance of my education background and research experiences.
-

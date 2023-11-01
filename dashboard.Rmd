@@ -1,0 +1,63 @@
+---
+title: "Dashboard"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+library(plotly)
+library(tidyverse)
+
+library(p8105.datasets)
+
+data("ny_noaa")
+
+ny_noaa_processed =  
+  ny_noaa |> 
+  drop_na() |> 
+  separate(date,
+           into =c("year", "month", "day"), 
+           sep="-", 
+           convert=TRUE) |> 
+  filter(year %in% 2008:2010 & month %in% 3:5 & snow>=30)
+
+```
+
+Column {data-width=670}
+-----------------------------------------------------------------------
+
+### Barplot: Counts of Weather Station
+
+```{r }
+ny_noaa_processed |> 
+  count(id) |> 
+  mutate(id = fct_reorder(id, n)) |> 
+  plot_ly(x=~id, y=~n, color=~id, type="bar", colors="viridis")
+
+```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Scatter plot: precipitation(tenths of mm) VS. Snowfall(mm)
+
+```{r}
+ny_noaa_processed |> 
+  plot_ly(y=~snow, x=~prcp, color=~id, type='scatter')
+```
+
+### Lineplot of Average Precipitation (tenths of mm)
+
+```{r}
+ny_noaa_processed |> 
+  group_by(id, month) |>
+  summarise(avg_prcp = mean(prcp), .groups = 'drop') |> 
+  plot_ly(x=~month, y=~avg_prcp, color=~id, type='scatter', mode='lines')
+```
+
+
+
+
